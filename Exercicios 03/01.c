@@ -1,57 +1,43 @@
-/* 
-     gcc 01.c -o app
-     ./app
-
- ;
-*/
-
 #include <stdio.h>
-
-
+#include <stdlib.h>
+ 
 int main()
 {
- /*  int vet[4];
-  //ponteiro
-  int *pVet = vet;
-  
-  char letra = 'e';
-  int num = 98;
-  float numF = 9.8;
-  double numFF = 9.800;
-
-  printf("\n%li  inicial \n", (long int)pVet);
-  printf("%li \n", (long int)&vet[0]);
-  printf("%li \n", (long int)&vet[1]);
-  printf("%li \n", (long int)&vet[2]);
-  printf("%li \n", (long int)&vet[3]);
-
-  vet[0]= letra;
-  vet[1]= num;
-  vet[2]= numF;
-  vet[3]= numFF;
-
-  int x = (*vet)++;
-  printf ("%d %d %d %d\n",vet[0],vet[1],vet[2],vet[3]);
-   printf("\n");
-   //printf ("%f\n",*(vet+1));
-  printf("%li \n", (long int)&vet[0]);
-  printf("%li \n", (long int)&vet[1]);
-  printf("%li \n", (long int)&vet[2]);
-  printf("%li \n", (long int)&vet[3]);
-
-
-
+char nome[50];
+int a, b, c = 0;
  
-
-  printf("%li final \n \n",(long int) pVet);
-
- */
-int iVar = 15;
-int jVar,*pPont,*qPont;
-pPont = &iVar;
-jVar = 2 * (*pPont);
-qPont = 2 + (pPont);
-
-    return 0;
+while (c == 0){
+   a = 22;
+printf("\tPROGRAMA: INVERSAO DE FRASE\n\n\n");
+printf("Digite seu texto: \n\n");
+ 
+gets(nome);
+ 
+ 
+b=strlen(nome);
+ 
+printf("%d\n", b );
+ 
+int cont;
+ 
+for (cont=0; cont<=b; cont++)
+{
+nome[cont]^= a;
+a = a + 1;
 }
-  
+nome[b] = '\0';
+ 
+ 
+ 
+printf("\n\n Seu texto criptografado e:\n\n%s\n\n\n\t\t",nome);
+ 
+getch();
+//system("cls");
+ 
+system("pause");
+printf("Digite o valor da variavel 'c'(0 - para continuar e outro numero para sair)\n");
+scanf("%d/n", &c);
+fflush(stdin);
+}
+ 
+}
